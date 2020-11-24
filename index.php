@@ -1,40 +1,25 @@
-<?php 
-Class A {
-	public function solve ($a,$b) {
-		if ($a == 0){
-		  return NULL;
-		}
-		return $this->X=-($b/$a);
-	}
-	protected $X;
-}
-Class B extends A {
-    protected function dis($a, $b, $c) {
-		$x = ($b**2)-4*$a*$c;
-		return $x;
-	}
-	public function qu_solve($a, $b, $c){
-		$x = $this->solve($b,$c);
-		if($a == 0){
-			return $this->solve($b,$c);
-		}
-		if ($x > 0) {
-			return $this->X=array (
-				-($b+sqrt($b**2-4*$a*$c)/2*$a),
-				-($b-sqrt($b**2-4*$a*$c)/2*$a)
-			);
-		}
-		
-		if ($x == 0) {
-			return $this->X=array(-($b/(2*$a)));
-		}
-		return $this->X=NULL;
-	}
-}
-	$a = new A();
-	$b = new B();
-	$a->solve(1,2);
-	$b->qu_solve(0,2,1);
-	echo'hello';
-	?>
-			
+<?php
+
+use polueva\MyLog;
+
+use polueva\QuEquation;
+
+include "core/EquationInterface.php";
+include "core/LogAbstract.php";
+include "core/LogInterface.php";
+include "polueva/MyLog.php";
+include "polueva/Equation.php";
+include "polueva/QuEquation.php";
+
+
+
+$a = MyLog::Instance();
+$b = MyLog::Instance();
+
+$a->log('1');
+$a->log('2');
+$a->log('3');
+$a->log('4');
+$b->write();
+
+?>
