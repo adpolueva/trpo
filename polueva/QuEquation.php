@@ -15,7 +15,7 @@ Class QuEquation extends Equation implements EquationInterface{
 	    if($a == 0){
 	        return $this->line($b,$c);
 	    }
-
+        MyLog::log("Определено, что это квадратное уравнение");
 		if ($x > 0){
 		    return $this->X=array(
 		        (-$b+sqrt($x))/(2*$a),
@@ -27,7 +27,7 @@ Class QuEquation extends Equation implements EquationInterface{
 			return $this->X=array(-($b/(2*$a)));
 		}
 
-		return null;
+		throw new PoluevaException("Ошибка: уравнение не имеет корней.");
 		
 	}
 	
