@@ -4,13 +4,7 @@ use polueva\MyLog;
 use polueva\PoluevaException;
 use polueva\QuEquation;
 
-include "core/EquationInterface.php";
-include "core/LogAbstract.php";
-include "core/LogInterface.php";
-include "polueva/MyLog.php";
-include "polueva/Equation.php";
-include "polueva/QuEquation.php";
-include "polueva/PoluevaException.php";
+require __DIR__ . '/vendor/autoload.php';
 
 ini_set("display_errors", 1);
 error_reporting (-1);

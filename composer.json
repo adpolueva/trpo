@@ -1,0 +1,20 @@
+{
+    "name": "adpolueva/trpo",
+    "type": "project",
+    "authors": [{
+        "name": "Polueva Alexandra",
+        "email": "killjoy.kemovski@gmail.com"
+    }],
+    "repositories": [{
+        "type": "vcs",
+        "url": "https://github.com/rok9ru/trpo-core.git"
+    }, {
+        "type": "vcs",
+        "url": "https://github.com/adpolueva/polueva.git"
+    }],
+    "minimum-stability": "dev",
+    "require": {
+        "rok9ru/trpo-core": "^2.0",
+        "adpolueva/polueva": "^1.0"
+    }
+}
